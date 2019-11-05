@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        @font-face{
+            font-family: 'Google Sans Regular';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Google Sans Regular'), url('GoogleSans-Regular.ttf') format('truetype');
+        }
+        @font-face{
+            font-family: 'Google Sans Bold';
+            font-style: normal;
+            font-weight: normal;
+            src: local('Google Sans Bold'), url('GoogleSans-Bold.ttf') format('truetype');
+        }
+        #header{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+         
+        }
+        body{
+            background-color: #ffffff;
+            font-family:'Google Sans Regular';
+            font-size:large;
+        }
+        .round{
+            border-radius:5%;
+        }
+        .hiddenCol{
+            display:none;
+        }
+        .textClass{
+            border-radius:5%;
+        }
+        .link1{
+            padding-top:0.7%;
+            text-align:center;
+            font-family:'Google Sans Bold';
+            color:white;
+            text-decoration:none;
+            border-radius:5%;
+        }
+        .link2{
+            text-align:center;
+            font-family:'Google Sans Bold';
+            color: black;
+            font-size:0.75em;
+            text-decoration:none;
+            border-radius:5%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header">
+        <asp:Image ID="logo" runat="server" Height="7.5%" Width="20%" ImageUrl="logo.png"/>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
